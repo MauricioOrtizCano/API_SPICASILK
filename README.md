@@ -1,165 +1,227 @@
-<h2>Proyecto Spika Silk - Documentación Técnica</h2>
-<h4>Descripción General</h4>
+    <h1>Proyecto Spika Silk - Documentación Técnica</h1>
 
-<p>Spika Silk es un e-commerce especializado en accesorios de belleza para mujer, incluyendo aretes, accesorios para el cabello y gorros de baño. La plataforma está construida con una arquitectura cliente-servidor, utilizando Laravel como framework backend y proporcionando una API RESTful para la comunicación con el frontend.</p>
+    <div class="section">
+        <h2>Descripción General</h2>
+        <p>Spika Silk es un e-commerce especializado en accesorios de belleza para mujer, incluyendo aretes, accesorios para el cabello y gorros de baño. La plataforma está construida con una arquitectura cliente-servidor, utilizando Laravel como framework backend y proporcionando una API RESTful para la comunicación con el frontend.</p>
+    </div>
 
-<h4>Arquitectura Técnica</h4>
-<h5>Backend (Laravel PHP)</h5>
+    <div class="section">
+        <h2>Arquitectura Técnica</h2>
 
-<ul>
-<li>Framework: Laravel (PHP)</li>
-<li>Base de Datos: MySQL</li>
-<li>Autenticación: Laravel Sanctum/JWT</li>
-<li>Arquitectura: MVC con servicios y repositorios</li>
-<ul>
+        <h3>Backend (Laravel PHP)</h3>
+        <ul>
+            <li><strong>Framework:</strong> Laravel (PHP)</li>
+            <li><strong>Base de Datos:</strong> MySQL</li>
+            <li><strong>Autenticación:</strong> Laravel Sanctum/JWT</li>
+            <li><strong>Arquitectura:</strong> MVC con servicios y repositorios</li>
+        </ul>
 
-Estructura de Base de Datos
-Tablas Principales:
+        <h3>Estructura de Base de Datos</h3>
+        <h4>Tablas Principales:</h4>
+        <ol>
+            <li>
+                <strong>Users</strong>
+                <ul>
+                    <li>Gestión de usuarios (clientes y administradores)</li>
+                    <li>Información de perfil y contacto</li>
+                    <li>Sistema de roles y permisos</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Products</strong>
+                <ul>
+                    <li>Catálogo de productos</li>
+                    <li>Gestión de inventario</li>
+                    <li>Soporte para múltiples variantes de color</li>
+                    <li>Sistema de categorización</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Orders</strong>
+                <ul>
+                    <li>Gestión de pedidos</li>
+                    <li>Sistema de estados (pending, processing, completed, etc.)</li>
+                    <li>Registro de transacciones</li>
+                    <li>Información de envío</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Categories</strong>
+                <ul>
+                    <li>Organización jerárquica de productos</li>
+                    <li>Gestión de subcategorías</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
 
-Users
+    <div class="section">
+        <h2>Funcionalidades Clave</h2>
 
-Gestión de usuarios (clientes y administradores)
-Información de perfil y contacto
-Sistema de roles y permisos
+        <h3>Panel de Administración</h3>
+        <ol>
+            <li>
+                <strong>Gestión de Productos</strong>
+                <ul>
+                    <li>CRUD de productos</li>
+                    <li>Control de inventario</li>
+                    <li>Gestión de variantes de color</li>
+                    <li>Carga de imágenes</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Gestión de Pedidos</strong>
+                <ul>
+                    <li>Seguimiento de estados</li>
+                    <li>Procesamiento de pagos</li>
+                    <li>Gestión de envíos</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Análisis y Reportes</strong>
+                <ul>
+                    <li>Estadísticas de ventas</li>
+                    <li>Reportes de inventario</li>
+                    <li>Análisis de clientes</li>
+                </ul>
+            </li>
+        </ol>
 
-Products
+        <h3>Portal de Cliente</h3>
+        <ol>
+            <li>
+                <strong>Catálogo de Productos</strong>
+                <ul>
+                    <li>Búsqueda y filtrado</li>
+                    <li>Visualización de variantes</li>
+                    <li>Sistema de categorías</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Carrito de Compras</strong>
+                <ul>
+                    <li>Gestión de productos</li>
+                    <li>Cálculo de totales</li>
+                    <li>Proceso de checkout</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Gestión de Cuenta</strong>
+                <ul>
+                    <li>Historial de pedidos</li>
+                    <li>Información de perfil</li>
+                    <li>Direcciones de envío</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
 
-Catálogo de productos
-Gestión de inventario
-Soporte para múltiples variantes de color
-Sistema de categorización
+    <div class="section">
+        <h2>Seguridad</h2>
+        <ol>
+            <li>
+                <strong>Autenticación</strong>
+                <ul>
+                    <li>Sistema de login/registro</li>
+                    <li>Recuperación de contraseña</li>
+                    <li>Tokens de sesión</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Autorización</strong>
+                <ul>
+                    <li>Roles (admin/customer)</li>
+                    <li>Permisos granulares</li>
+                    <li>Middleware de protección</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Validación de Datos</strong>
+                <ul>
+                    <li>Sanitización de inputs</li>
+                    <li>Validación de formularios</li>
+                    <li>Protección CSRF</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
 
-Orders
+    <div class="section">
+        <h2>Procesos de Negocio</h2>
+        <ol>
+            <li>
+                <strong>Gestión de Inventario</strong>
+                <ul>
+                    <li>Actualización automática de stock</li>
+                    <li>Alertas de bajo inventario</li>
+                    <li>Control de variantes</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Proceso de Compra</strong>
+                <ul>
+                    <li>Validación de stock</li>
+                    <li>Procesamiento de pagos</li>
+                    <li>Generación de órdenes</li>
+                    <li>Notificaciones por email</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Seguimiento de Pedidos</strong>
+                <ul>
+                    <li>Actualización de estados</li>
+                    <li>Notificaciones de cambios</li>
+                    <li>Historial de transacciones</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
 
-Gestión de pedidos
-Sistema de estados (pending, processing, completed, etc.)
-Registro de transacciones
-Información de envío
+    <div class="section">
+        <h2>Consideraciones Técnicas</h2>
 
-Categories
+        <h3>Escalabilidad</h3>
+        <ul>
+            <li>Sistema modular para fácil expansión</li>
+            <li>Caché de consultas frecuentes</li>
+            <li>Optimización de consultas a base de datos</li>
+        </ul>
 
-Organización jerárquica de productos
-Gestión de subcategorías
+        <h3>Mantenibilidad</h3>
+        <ul>
+            <li>Código documentado</li>
+            <li>Pruebas automatizadas</li>
+            <li>Convenciones de código PSR</li>
+            <li>Sistema de versionado Git</li>
+        </ul>
 
-Funcionalidades Clave
-Panel de Administración
+        <h3>Rendimiento</h3>
+        <ul>
+            <li>Lazy loading de relaciones</li>
+            <li>Índices en base de datos</li>
+            <li>Caché de productos y categorías</li>
+        </ul>
+    </div>
 
-Gestión de Productos
+    <div class="section">
+        <h2>Requerimientos del Sistema</h2>
 
-CRUD de productos
-Control de inventario
-Gestión de variantes de color
-Carga de imágenes
+        <h3>Servidor</h3>
+        <ul>
+            <li>PHP >= 8.1</li>
+            <li>MySQL >= 5.7</li>
+            <li>Composer</li>
+            <li>Node.js para assets</li>
+        </ul>
 
-Gestión de Pedidos
-
-Seguimiento de estados
-Procesamiento de pagos
-Gestión de envíos
-
-Análisis y Reportes
-
-Estadísticas de ventas
-Reportes de inventario
-Análisis de clientes
-
-Portal de Cliente
-
-Catálogo de Productos
-
-Búsqueda y filtrado
-Visualización de variantes
-Sistema de categorías
-
-Carrito de Compras
-
-Gestión de productos
-Cálculo de totales
-Proceso de checkout
-
-Gestión de Cuenta
-
-Historial de pedidos
-Información de perfil
-Direcciones de envío
-
-Seguridad
-
-Autenticación
-
-Sistema de login/registro
-Recuperación de contraseña
-Tokens de sesión
-
-Autorización
-
-Roles (admin/customer)
-Permisos granulares
-Middleware de protección
-
-Validación de Datos
-
-Sanitización de inputs
-Validación de formularios
-Protección CSRF
-
-Procesos de Negocio
-
-Gestión de Inventario
-
-Actualización automática de stock
-Alertas de bajo inventario
-Control de variantes
-
-Proceso de Compra
-
-Validación de stock
-Procesamiento de pagos
-Generación de órdenes
-Notificaciones por email
-
-Seguimiento de Pedidos
-
-Actualización de estados
-Notificaciones de cambios
-Historial de transacciones
-
-Consideraciones Técnicas
-Escalabilidad
-
-Sistema modular para fácil expansión
-Caché de consultas frecuentes
-Optimización de consultas a base de datos
-
-Mantenibilidad
-
-Código documentado
-Pruebas automatizadas
-Convenciones de código PSR
-Sistema de versionado Git
-
-Rendimiento
-
-Lazy loading de relaciones
-Índices en base de datos
-Caché de productos y categorías
-
-Requerimientos del Sistema
-Servidor
-
-PHP >= 8.1
-MySQL >= 5.7
-Composer
-Node.js para assets
-
-Extensiones PHP Requeridas
-
-BCMath
-Ctype
-JSON
-Mbstring
-OpenSSL
-PDO
-XML
-
-Esta documentación proporciona una visión general de la arquitectura y funcionalidades del sistema Spika Silk, sirviendo como guía para desarrolladores y mantenedores del proyecto.
+        <h3>Extensiones PHP Requeridas</h3>
+        <ul>
+            <li>BCMath</li>
+            <li>Ctype</li>
+            <li>JSON</li>
+            <li>Mbstring</li>
+            <li>OpenSSL</li>
+            <li>PDO</li>
+            <li>XML</li>
+        </ul>
+    </div>
