@@ -1,13 +1,17 @@
-Proyecto Spika Silk - Documentación Técnica
-Descripción General
-Spika Silk es un e-commerce especializado en accesorios de belleza para mujer, incluyendo aretes, accesorios para el cabello y gorros de baño. La plataforma está construida con una arquitectura cliente-servidor, utilizando Laravel como framework backend y proporcionando una API RESTful para la comunicación con el frontend.
-Arquitectura Técnica
-Backend (Laravel PHP)
+<h2>Proyecto Spika Silk - Documentación Técnica</h2>
+<h4>Descripción General</h4>
 
-Framework: Laravel (PHP)
-Base de Datos: MySQL
-Autenticación: Laravel Sanctum/JWT
-Arquitectura: MVC con servicios y repositorios
+<p>Spika Silk es un e-commerce especializado en accesorios de belleza para mujer, incluyendo aretes, accesorios para el cabello y gorros de baño. La plataforma está construida con una arquitectura cliente-servidor, utilizando Laravel como framework backend y proporcionando una API RESTful para la comunicación con el frontend.</p>
+
+<h4>Arquitectura Técnica</h4>
+<h5>Backend (Laravel PHP)</h5>
+
+<ul>
+<li>Framework: Laravel (PHP)</li>
+<li>Base de Datos: MySQL</li>
+<li>Autenticación: Laravel Sanctum/JWT</li>
+<li>Arquitectura: MVC con servicios y repositorios</li>
+<ul>
 
 Estructura de Base de Datos
 Tablas Principales:
